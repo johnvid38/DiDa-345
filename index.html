@@ -1,6 +1,16 @@
 <!DOCTYPE html?>
 <head>
   <title>My Online Portfolio</title>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content ="width-device-width, initial-scale=1.0">
+  <script scr="https://cdn.jddelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container{
+      width:90%;
+      max-width:800px;
+      margin:30px auto;
+    }
+  </style>
 </head>
 <body>
   <h1 style="text-align:center;">My Online Portfolio</h1>
@@ -8,5 +18,29 @@
   <div style="text-align:center;" class="image"> 
     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH5c2i7D8Mao4q4faPorxfiOtQOa2T9F5cqQC6MHIi0g&s=10">
   </div>
+  <div class = "chart-container">
+    <canvas id = chart></canvas>
+  </div>
+  <script>
+    const ctx.getElementById("chart");
+    new Chart(ctx,{
+      type:"line", 
+      data: {
+        labels:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        datasets:[{
+          label: "Coffee Spending",
+          data: [6.00, 10.00, 14.00, 18.00, 20.00],
+
+          borderColor: "#FFO145",
+          backgroundColor:"#E3DCDC",
+          borderWidth:3,
+          fill:true,
+          tension:0.35,
+          pointRadius: 4,
+          pointBackgroundColor: "#FF0145"
+        }]
+      },
+      options:
+  </script>
 </body>
 </html>
