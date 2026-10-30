@@ -58,6 +58,9 @@
   <div class = "chart-container">
     <canvas id = "chart"></canvas>
   </div>
+  <div class="chart-container">
+    <canvas id="barChart"></canvas>
+  </div>
   <section id="about">
     <h2 style="text-align:center;">About Me</h2>
     <p style="text-align:center;">I am a Economics student with a minor in Digital and Data Studies with interests in a wealth management career.</p>
@@ -82,6 +85,28 @@
       },
       options:{
         responsive: true
+      }
+    });
+     const ctx = document.getElementById("barChart");
+    new Chart(ctx2, {
+      type:"bar", 
+      data: {
+        labels:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        datasets:[{
+          label: "Daily Calorie Consumption",
+          data: [1500, 2100, 2100, 1900, 2600],
+          borderColor: "#FF0145",
+          backgroundColor:"#FF0145",
+          borderWidth:0
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
       }
     });
   </script>
