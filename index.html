@@ -29,14 +29,14 @@
     <canvas id = chart></canvas>
   </div>
   <script>
-    const ctx.getElementById("chart");
+    const ctx = document.getElementById("chart");
     new Chart(ctx,{
       type:"line", 
       data: {
         labels:["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         datasets:[{
-          label: "Coffee Spending",
-          data: [6.00, 10.00, 14.00, 18.00, 20.00],
+          label: "Time Spent In The Library a Week",
+          data: [1.5, 4.5, 4.5, 8, 10],
 
           borderColor: "#FFO145",
           backgroundColor:"#E3DCDC",
