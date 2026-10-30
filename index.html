@@ -2,8 +2,8 @@
 <head>
   <title>My Online Portfolio</title>
   <meta charset = "UTF-8">
-  <meta name = "viewport" content ="width-device-width, initial-scale=1.0">
-  <script scr="https://cdn.jddelivr.net/npm/chart.js@4"></script>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <script src="https://cdn.jddelivr.net/npm/chart.js@4"></script>
   <style>
     .chart-container{
       width:90%;
@@ -13,7 +13,7 @@
     .image img {
       width: 300px;
       height: 300px;
-      object-fit: cover:
+      object-fit: cover;
     }
   </style>
 </head>
@@ -26,7 +26,7 @@
     <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ihZqFGk3-NzMwOBDEA2WSfgy6pOol1-UbJ7NOJXZeA&s=10">
   </div>
   <div class = "chart-container">
-    <canvas id = chart></canvas>
+    <canvas id = "chart"></canvas>
   </div>
   <script>
     const ctx = document.getElementById("chart");
@@ -37,8 +37,7 @@
         datasets:[{
           label: "Time Spent In The Library a Week",
           data: [1.5, 4.5, 4.5, 8, 10],
-
-          borderColor: "#FFO145",
+          borderColor: "#FF0145",
           backgroundColor:"#E3DCDC",
           borderWidth:3,
           fill:true,
@@ -48,6 +47,9 @@
         }]
       },
       options:{
+        responsive: true
+      }
+    });
   </script>
 </body>
 </html>
